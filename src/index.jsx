@@ -23,18 +23,6 @@ const createStoreWithMiddleware = applyMiddleware(
 )(createStore);
 const store = createStoreWithMiddleware(reducer);
 
-store.dispatch({
-  type: 'SET_STATE',
-  state: {
-    vote: {
-      pair: ["Homer at the Bat", "Treehouse of Horror V"],
-      tally: {
-        "Homer at the Bat": 2
-      }
-    }
-  }
-});
-
 const routes = <Route component={App}>
   <Route path="/results" component={ResultsContainer} />
   <Route path="/" component={VotingContainer} />
